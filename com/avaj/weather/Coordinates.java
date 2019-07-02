@@ -13,7 +13,7 @@ public class Coordinates {
 
     public Coordinates(int latitude, int longitude, int height){
         height = height > 100 ? 100 : height;
-        height = height < 100 ? 0 : height;
+        height = height < 0 ? 0 : height;
         latitude = latitude > 90 ? 90 : latitude;
         latitude = latitude < 0 ? 0 : latitude;
         longitude = longitude > 180 ? 180 : longitude;

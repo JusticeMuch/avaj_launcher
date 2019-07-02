@@ -38,9 +38,15 @@ public class Simulator {
                     //     Integer.parseInt(lines[2]), Integer.parseInt(lines[3]), 
                     //     Integer.parseInt(lines[4])));
                     //     writer.println(lines[4]);
-                    AircraftFactory.newAircraft(lines[0], lines[1], 
+                    Flyable temp = AircraftFactory.newAircraft(lines[0], lines[1], 
                         Integer.parseInt(lines[2]), Integer.parseInt(lines[3]), 
-                        Integer.parseInt(lines[4])).registerTower(tower);
+                        Integer.parseInt(lines[4]));
+                    temp.registerTower(tower);
+                    
+                }
+                while (cycles > 0){
+                    tower.conditionChanged();
+                    cycles--;
                 }
                 br.close();
             }
@@ -51,10 +57,7 @@ public class Simulator {
                 System.out.println(ex);
             }
 
-        while (cycles < 0){
-            tower.conditionChanged();
-            cycles--;
-        }
+        
         
         writer.close();
     }
