@@ -2,18 +2,18 @@ package com.avaj;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.avaj.*;
 import com.avaj.aircraft.*;
 import com.avaj.weather.*;
 
 public class Tower {
 
-    private List<Flyable> observers = new ArrayList<Flyable>();
+    private  List<Flyable> observers = new ArrayList<Flyable>();
 
     public void register(Flyable flyable)
     {
-        if (observers.contains(flyable))
+        if (observers.contains(flyable)){   
             return;
+        }
         observers.add(flyable);
     }
 

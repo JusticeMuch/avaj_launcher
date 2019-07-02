@@ -1,8 +1,10 @@
 package com.avaj.aircraft;
 
-import com.avaj.*;
-import com.avaj.aircraft;
+import com.avaj.Tower;
+import com.avaj.WeatherTower;
+import com.avaj.aircraft.*;
 import com.avaj.weather.*;
+import java.io.*;
 
 public class Aircraft{
 
@@ -12,11 +14,10 @@ public class Aircraft{
     protected static long idCounter = 0;
 
     long nextId(){
-       return (this.idCounter++);
+       return (idCounter++);
     }
 
     Aircraft(String name, Coordinates coordinates){
-        idCounter++;
         this.name = name;
         this.coordinates = coordinates;
         this.id = nextId();

@@ -1,12 +1,13 @@
 package com.avaj.aircraft;
 
-import com.avaj.*;
+import com.avaj.Tower;
+import com.avaj.WeatherTower;
 import com.avaj.aircraft.*;
 import com.avaj.weather.*;
 
 public class AircraftFactory {
 
-    Flyable newAircraft(String type, String name, int longitude, int latitude, int height){
+    public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height){
 
         Coordinates coordinates = new Coordinates(latitude, longitude, height);
 

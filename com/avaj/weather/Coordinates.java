@@ -1,6 +1,7 @@
 package com.avaj.weather;
 
-import com.avaj.*;
+import com.avaj.Tower;
+import com.avaj.WeatherTower;
 import com.avaj.aircraft.*;
 import com.avaj.weather.*;
 
@@ -10,7 +11,7 @@ public class Coordinates {
     private int longitude;
     private int height;
 
-    Coordinates(int latitude, int longitude, int height){
+    public Coordinates(int latitude, int longitude, int height){
         height = height > 100 ? 100 : height;
         height = height < 100 ? 0 : height;
         latitude = latitude > 90 ? 90 : latitude;
@@ -23,15 +24,15 @@ public class Coordinates {
         this.latitude = latitude;
     }
 
-    int getLatitude(){
+    public int getLatitude(){
         return this.latitude;
     }
 
-    int getLongitude(){
+    public int getLongitude(){
         return this.longitude;
     }
 
-    int getHeight(){
+    public int getHeight(){
         return this.height;
     }
 }

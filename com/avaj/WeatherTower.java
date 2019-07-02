@@ -1,6 +1,6 @@
 package com.avaj;
 
-import com.avaj.*;
+import com.avaj.Tower;
 import com.avaj.aircraft.*;
 import com.avaj.weather.*;
 
