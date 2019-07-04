@@ -30,11 +30,12 @@ public class Simulator {
                 }
                 while ((line = br.readLine()) != null){
                     lines = line.split(" ");
+                    if (lines.length != 5)
+                        return ;
                     Flyable temp = AircraftFactory.newAircraft(lines[0], lines[1], 
                         Integer.parseInt(lines[2]), Integer.parseInt(lines[3]), 
                         Integer.parseInt(lines[4]));
                     temp.registerTower(tower);
-                    
                 }
                 while (cycles > 0){
                     tower.conditionChanged();
