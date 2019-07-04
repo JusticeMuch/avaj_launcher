@@ -1,17 +1,14 @@
 package com.avaj;
 
 import java.io.*;
-import com.avaj.Tower;
 import com.avaj.WeatherTower;
 import com.avaj.aircraft.*;
-import com.avaj.weather.*;
 
 public class Simulator {
 
     public static PrintWriter writer;
     public static WeatherTower tower;
     public static void main(String[] args){
-    // AircraftFactory aircraftFactory = new AircraftFactory();
     tower = new WeatherTower();
     int cycles = 0;
     try{
@@ -22,7 +19,6 @@ public class Simulator {
     }
     String[] lines = null;
     String line;
-    int counter = -1;
         if (args.length < 1)
             return ;
 
@@ -34,10 +30,6 @@ public class Simulator {
                 }
                 while ((line = br.readLine()) != null){
                     lines = line.split(" ");
-                    // tower.register(aircraftFactory.newAircraft(lines[0], lines[1], 
-                    //     Integer.parseInt(lines[2]), Integer.parseInt(lines[3]), 
-                    //     Integer.parseInt(lines[4])));
-                    //     writer.println(lines[4]);
                     Flyable temp = AircraftFactory.newAircraft(lines[0], lines[1], 
                         Integer.parseInt(lines[2]), Integer.parseInt(lines[3]), 
                         Integer.parseInt(lines[4]));
@@ -56,9 +48,6 @@ public class Simulator {
             catch (IOException ex){
                 System.out.println(ex);
             }
-
-        
-        
         writer.close();
     }
 }

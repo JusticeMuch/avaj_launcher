@@ -1,9 +1,7 @@
 package com.avaj.aircraft;
 
-import com.avaj.Tower;
 import com.avaj.Simulator;
 import com.avaj.WeatherTower;
-import com.avaj.aircraft.*;
 import com.avaj.weather.*;
 import java.util.HashMap;
 

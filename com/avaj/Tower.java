@@ -3,7 +3,6 @@ package com.avaj;
 import java.util.ArrayList;
 import java.util.List;
 import com.avaj.aircraft.*;
-import com.avaj.weather.*;
 
 public class Tower {
 

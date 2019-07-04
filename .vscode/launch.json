@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Simulator",
+            "request": "launch",
+            "mainClass": "com.avaj.Simulator",
+            "projectName": "avaj_launcher_75408fdf"
+        }
+    ]
+}
